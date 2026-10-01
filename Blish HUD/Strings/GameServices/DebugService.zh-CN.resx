@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DebugSettingsSection" xml:space="preserve">
+    <value>调试设置</value>
+  </data>
+  <data name="Setting_AdditionalDebugDisplay_Description" xml:space="preserve">
+    <value>启用后显示更多调试信息。</value>
+  </data>
+  <data name="Setting_AdditionalDebugDisplay_DisplayName" xml:space="preserve">
+    <value>显示额外调试数据</value>
+  </data>
+  <data name="Setting_DebugLogging_Description" xml:space="preserve">
+    <value>启用后，Blish HUD 将记录更详细的日志。</value>
+  </data>
+  <data name="Setting_DebugLogging_DisplayName" xml:space="preserve">
+    <value>启用调试日志</value>
+  </data>
+  <data name="Setting_Debug_Locked_Description" xml:space="preserve">
+    <value>（已禁用，因为启动参数包含 --debug）</value>
+  </data>
+  <data name="Setting_FPSDisplay_Description" xml:space="preserve">
+    <value>启用后，显示 Blish HUD 覆盖层当前的渲染帧率。</value>
+  </data>
+  <data name="Setting_FPSDisplay_DisplayName" xml:space="preserve">
+    <value>显示 Blish HUD 帧率</value>
+  </data>
+</root>

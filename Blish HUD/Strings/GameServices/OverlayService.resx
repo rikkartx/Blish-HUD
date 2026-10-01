@@ -327,4 +327,16 @@ participate in the conversation?</value>
   <data name="Setting_MuteIfNoGameAudio_DisplayName" xml:space="preserve">
     <value>Mute when Game is muted.</value>
   </data>
+  <data name="Setting_CustomFont_DisplayName" xml:space="preserve">
+    <value>Custom interface font</value>
+  </data>
+  <data name="Setting_CustomFont_Description" xml:space="preserve">
+    <value>Installed font family name or full path to a TrueType font file (.ttf/.ttc). Leave empty for the default font. Restart Blish HUD to apply. For Chinese, choose a font with Chinese glyphs.</value>
+  </data>
+  <data name="Font_RestartRequired" xml:space="preserve">
+    <value>Restart Blish HUD to apply the language/font change to all controls.</value>
+  </data>
+  <data name="Font_Invalid" xml:space="preserve">
+    <value>Font unavailable. Enter an installed font family or a valid TrueType font file path.</value>
+  </data>
 </root>

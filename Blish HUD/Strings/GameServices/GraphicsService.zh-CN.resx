@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="GraphicsSettingsSection" xml:space="preserve">
+    <value>图形设置</value>
+  </data>
+  <data name="Setting_FramerateLimiter_DisplayName" xml:space="preserve">
+    <value>帧率限制</value>
+  </data>
+  <data name="Setting_FramerateLimiter_Description" xml:space="preserve">
+    <value>选择 Blish HUD 的帧率控制方式。</value>
+  </data>
+  <data name="Setting_FramerateLimiter_Locked_Description" xml:space="preserve">
+    <value>（已禁用，因为启动参数包含 --maxfps 或 --unlockfps）</value>
+  </data>
+  <data name="Setting_SmoothCharacterPosition_DisplayName" xml:space="preserve">
+    <value>平滑角色位置</value>
+  </data>
+  <data name="Setting_SmoothCharacterPosition_Description" xml:space="preserve">
+    <value>启用后，平滑处理角色位置，减少 3D 覆盖层元素的跳动。</value>
+  </data>
+  <data name="Setting_DPIScaling_DisplayName" xml:space="preserve">
+    <value>DPI 缩放</value>
+  </data>
+  <data name="Setting_DPIScaling_Description" xml:space="preserve">
+    <value>按照系统设置对界面进行额外缩放。</value>
+  </data>
+  <data name="Setting_UIScaling_Description" xml:space="preserve">
+    <value>设置界面缩放比例。可以跟随游戏或手动指定。
+注意：“自动”仅在角色登录后更新。</value>
+  </data>
+  <data name="Setting_UIScaling_DisplayName" xml:space="preserve">
+    <value>界面大小</value>
+  </data>
+</root>

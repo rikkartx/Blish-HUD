@@ -658,5 +658,21 @@ namespace Blish_HUD.Strings.GameServices {
                 return ResourceManager.GetString("Setting_Volume_DisplayName", resourceCulture);
             }
         }
+        internal static string Setting_CustomFont_DisplayName {
+            get { return ResourceManager.GetString("Setting_CustomFont_DisplayName", resourceCulture); }
+        }
+
+        internal static string Setting_CustomFont_Description {
+            get { return ResourceManager.GetString("Setting_CustomFont_Description", resourceCulture); }
+        }
+
+        internal static string Font_RestartRequired {
+            get { return ResourceManager.GetString("Font_RestartRequired", resourceCulture); }
+        }
+
+        internal static string Font_Invalid {
+            get { return ResourceManager.GetString("Font_Invalid", resourceCulture); }
+        }
+
     }
 }

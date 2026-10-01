@@ -50,6 +50,13 @@ Pull requests are welcome. You are encouraged to join the discussion in the [Bli
 3.  In the `Solution Explorer` on the right click on the solution icon. In the context menu click `Restore NuGet Packages`.
 4.  Right click the solution icon again and click `Build Solution`. 
 
+### Interface Language and Fonts
+
+Simplified Chinese is available under **Settings → Overlay Settings → Application & API Language**.
+Restart after switching into Chinese to load the Chinese fonts. **Custom interface font** accepts
+an installed font family name or a `.ttf` / `.ttc` file path; changes take effect after restart.
+Leave it empty to use the default font. See [font configuration and validation](docs/chinese-and-fonts.md).
+
 ### Module Development
 
 - [Visual Studio 2019 Module Template](https://github.com/blish-hud/Module-Template)

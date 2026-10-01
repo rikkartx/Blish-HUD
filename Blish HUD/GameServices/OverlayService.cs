@@ -47,6 +47,8 @@ namespace Blish_HUD {
         internal SettingCollection DynamicHUDSettings { get; private set; }
 
         public SettingEntry<Locale> UserLocale    { get; private set; }
+        public SettingEntry<string> CustomFont { get; private set; }
+        private bool _initialSettingsApplied;
         public SettingEntry<bool>   StayInTray    { get; private set; }
         public SettingEntry<bool>   ShowInTaskbar { get; private set; }
         internal SettingEntry<KeyBinding> InteractKey { get; private set; }
@@ -179,8 +181,13 @@ namespace Blish_HUD {
                 this.StayInTray.SetDisabled();
             }
 
-            // TODO: See https://github.com/blish-hud/Blish-HUD/issues/282
-            this.UserLocale.SetExcluded(Locale.Chinese);
+            this.CustomFont = settings.DefineSetting("CustomFont", string.Empty,
+                () => Strings.GameServices.OverlayService.Setting_CustomFont_DisplayName,
+                () => Strings.GameServices.OverlayService.Setting_CustomFont_Description);
+            this.CustomFont.SetValidation(ValidateCustomFont);
+            this.CustomFont.SettingChanged += delegate {
+                ScreenNotification.ShowNotification(Strings.GameServices.OverlayService.Font_RestartRequired);
+            };
 
             this.ShowInTaskbar.SettingChanged += ShowInTaskbarOnSettingChanged;
             this.UserLocale.SettingChanged    += UserLocaleOnSettingChanged;
@@ -213,7 +220,9 @@ namespace Blish_HUD {
         }
 
         private void ApplyInitialSettings() {
+            Content.ConfigureInterfaceFonts(this.CustomFont.Value, this.UserLocale.Value == Locale.Chinese);
             UserLocaleOnSettingChanged(this.UserLocale, new ValueChangedEventArgs<Locale>(GetGw2LocaleFromCurrentUICulture(), this.UserLocale.Value));
+            _initialSettingsApplied = true;
 
             GameIntegration.WinForms.SetShowInTaskbar(GameIntegration.Gw2Instance.Gw2IsRunning && this.ShowInTaskbar.Value);
         }
@@ -223,6 +232,12 @@ namespace Blish_HUD {
         }
 
         private void UserLocaleOnSettingChanged(object sender, ValueChangedEventArgs<Locale> e) {
+            // Existing controls retain their font references. Do not switch to Chinese
+            // resources until the next launch has created fonts with Chinese glyphs.
+            if (_initialSettingsApplied && e.NewValue == Locale.Chinese && !Content.SupportsChineseInterface) {
+                ScreenNotification.ShowNotification(Strings.GameServices.OverlayService.Font_RestartRequired);
+                return;
+            }
             var culture = GetCultureFromGw2Locale(e.NewValue);
 
             // Update the UI culture for the entire application domain by setting DefaultThreadCurrentUICulture
@@ -230,6 +245,17 @@ namespace Blish_HUD {
             CultureInfo.DefaultThreadCurrentUICulture = culture;
 
             this.UserLocaleChanged?.Invoke(this, new ValueEventArgs<CultureInfo>(culture));
+        }
+
+        private SettingValidationResult ValidateCustomFont(string source) {
+            try {
+                SystemBitmapFont.ValidateSource(source);
+                return new SettingValidationResult(true);
+            } catch (Exception ex) {
+                Logger.Warn(ex, "Invalid custom interface font.");
+                ScreenNotification.ShowNotification(Strings.GameServices.OverlayService.Font_Invalid);
+                return new SettingValidationResult(false, Strings.GameServices.OverlayService.Font_Invalid);
+            }
         }
 
         /// <summary>
@@ -286,7 +312,7 @@ namespace Blish_HUD {
                 case Locale.Korean:
                     return CultureInfo.GetCultureInfo(18); // Korean (ko-KR)
                 case Locale.Chinese:
-                    return CultureInfo.GetCultureInfo(30724); // Chinese (zh-CN)
+                    return CultureInfo.GetCultureInfo("zh-CN");
             }
 
             return CultureInfo.GetCultureInfo(9); // English (en-US)

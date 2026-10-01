@@ -1,0 +1,226 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="HomeTab" xml:space="preserve">
+    <value>主页</value>
+  </data>
+  <data name="AboutSection" xml:space="preserve">
+    <value>关于</value>
+  </data>
+  <data name="OverlaySettingsSection" xml:space="preserve">
+    <value>覆盖层设置</value>
+  </data>
+  <data name="AboutLoveMessage" xml:space="preserve">
+    <value>由 Blish HUD 团队与众多贡献者
+倾注对泰瑞亚的热爱设计并构建！</value>
+  </data>
+  <data name="Setting_ShowInTaskbar_Description" xml:space="preserve">
+    <value>启用后，Blish HUD 运行时将在任务栏中显示。</value>
+  </data>
+  <data name="Setting_ShowInTaskbar_DisplayName" xml:space="preserve">
+    <value>在任务栏显示</value>
+  </data>
+  <data name="Setting_StayInTray_DisplayName" xml:space="preserve">
+    <value>激战2关闭时最小化到托盘</value>
+  </data>
+  <data name="Setting_AppCulture_Description" xml:space="preserve">
+    <value>设置 Blish HUD 界面和 GW2 Web API 请求使用的语言。首次切换到中文后，请重启以加载中文字体。</value>
+  </data>
+  <data name="Setting_AppCulture_DisplayName" xml:space="preserve">
+    <value>界面与 API 语言</value>
+  </data>
+  <data name="Setting_StayInTray_Description" xml:space="preserve">
+    <value>启用后，激战2关闭时 Blish HUD 将自动最小化并继续运行，直到再次启动游戏。
+也可以通过托盘中的 Blish HUD 图标启动激战2。</value>
+  </data>
+  <data name="AboutAnetNotice" xml:space="preserve">
+    <value>©2010-{0} ArenaNet, LLC。保留所有权利。Guild Wars、Guild Wars 2、Heart of Thorns、
+Guild Wars 2: Path of Fire、ArenaNet、NCSOFT、Interlocking NC 标志及所有相关
+标志和设计均为 NCSOFT Corporation 的商标或注册商标。其他商标归各自所有者所有。</value>
+  </data>
+  <data name="Setting_UseGameVolume_Description" xml:space="preserve">
+    <value>启用后，Blish HUD 将跟随游戏音量调整自身音量。</value>
+  </data>
+  <data name="Setting_UseGameVolume_DisplayName" xml:space="preserve">
+    <value>使用游戏音量</value>
+  </data>
+  <data name="Setting_Volume_DisplayName" xml:space="preserve">
+    <value>音量</value>
+  </data>
+  <data name="Setting_Volume_Description" xml:space="preserve">
+    <value>设置 Blish HUD 的音量。仅在关闭“使用游戏音量”时生效。</value>
+  </data>
+  <data name="Setting_AudioDevice_DisplayName" xml:space="preserve">
+    <value>音频输出设备</value>
+  </data>
+  <data name="Setting_AudioDevice_Description" xml:space="preserve">
+    <value>选择音频输出设备。Gw2OutputDevice 会自动跟随激战2使用的设备。</value>
+  </data>
+  <data name="Setting_CloseWindowOnEscape_Description" xml:space="preserve">
+    <value>窗口获得焦点时，按 Escape 键关闭 Blish HUD 窗口。</value>
+  </data>
+  <data name="Setting_CloseWindowOnEscape_DisplayName" xml:space="preserve">
+    <value>按 Escape 关闭窗口</value>
+  </data>
+  <data name="Setting_HideInterfaceKeybind_Description" xml:space="preserve">
+    <value>隐藏全部 Blish HUD 界面，方便截图。</value>
+  </data>
+  <data name="Setting_HideInterfaceKeybind_DisplayName" xml:space="preserve">
+    <value>隐藏界面</value>
+  </data>
+  <data name="ConnectionStatus_Mumble_Name" xml:space="preserve">
+    <value>MumbleLink</value>
+  </data>
+  <data name="ConnectionStatus_Mumble_Disconnected" xml:space="preserve">
+    <value>无法连接到名为“{0}”的 MumbleLink。
+
+请检查激战2和 Blish HUD 的启动参数。</value>
+  </data>
+  <data name="ConnectionStatus_Mumble_Connected" xml:space="preserve">
+    <value>已连接到名为“{0}”的 MumbleLink。</value>
+  </data>
+  <data name="ConnectionStatus_ArcDPSBridge_Name" xml:space="preserve">
+    <value>ArcDPS 桥接</value>
+  </data>
+  <data name="ConnectionStatus_ArcDPSBridge_Connected" xml:space="preserve">
+    <value>已通过桥接插件连接到 ArcDPS。</value>
+  </data>
+  <data name="ConnectionStatus_ArcDPSBridge_Disconnected" xml:space="preserve">
+    <value>未收到桥接连接。
+
+可能尚未安装桥接插件。</value>
+  </data>
+  <data name="Setting_ToggleBlishWindowKeybind_Description" xml:space="preserve">
+    <value>设置显示或隐藏 Blish HUD 主窗口的快捷键。</value>
+  </data>
+  <data name="Setting_ToggleBlishWindowKeybind_DisplayName" xml:space="preserve">
+    <value>切换 Blish HUD 窗口</value>
+  </data>
+  <data name="Setting_DynamicHUDMenuBar_Description" xml:space="preserve">
+    <value>控制屏幕左上角菜单栏的可见性。</value>
+  </data>
+  <data name="Setting_DynamicHUDMenuBar_DisplayName" xml:space="preserve">
+    <value>菜单栏</value>
+  </data>
+  <data name="SelfUpdate_NewUpdateAvailable" xml:space="preserve">
+    <value>有新版本可用</value>
+  </data>
+  <data name="SelfUpdate_ChangesInVersion" xml:space="preserve">
+    <value>v{0} 的更新内容</value>
+  </data>
+  <data name="SelfUpdate_UpdateToReleaseMenuStripText" xml:space="preserve">
+    <value>更新到正式版 v{0}</value>
+  </data>
+  <data name="SelfUpdate_UpdateToPrereleaseMenuStripText" xml:space="preserve">
+    <value>更新到预览版 v{0}</value>
+  </data>
+  <data name="SelfUpdate_NoPendingUpdates" xml:space="preserve">
+    <value>没有待安装的更新</value>
+  </data>
+  <data name="SelfUpdate_Progress_DownloadingReleaseArchive" xml:space="preserve">
+    <value>正在下载正式版 v{0}……</value>
+  </data>
+  <data name="SelfUpdate_Progress_VerifyingChecksum" xml:space="preserve">
+    <value>正在验证校验和……</value>
+  </data>
+  <data name="SelfUpdate_Progress_ExtractingExecutable" xml:space="preserve">
+    <value>正在解压新程序……</value>
+  </data>
+  <data name="SelfUpdate_Progress_DownloadingPrereleaseArchive" xml:space="preserve">
+    <value>正在下载预览版 v{0}……</value>
+  </data>
+  <data name="SelfUpdate_PendingUpdatesQueryFailed" xml:space="preserve">
+    <value>检查更新失败</value>
+  </data>
+  <data name="SelfUpdate_Progress_RestartingIn" xml:space="preserve">
+    <value>将在 {0} 后重启……</value>
+  </data>
+  <data name="SelfUpdate_Progress_Restarting" xml:space="preserve">
+    <value>正在重启……</value>
+  </data>
+  <data name="Setting_InteractKey_Description" xml:space="preserve">
+    <value>用于与环境交互。
+建议与游戏内交互快捷键保持一致。</value>
+  </data>
+  <data name="Setting_InteractKey_DisplayName" xml:space="preserve">
+    <value>交互</value>
+  </data>
+  <data name="Setting_ShowPreviews_DisplayName" xml:space="preserve">
+    <value>预览版本</value>
+  </data>
+  <data name="Setting_ShowPreviews_Description" xml:space="preserve">
+    <value>启用后，可以在界面中获取模块和 Blish HUD 的预览版本。
+
+注意：预览版本可能不稳定，可能出现崩溃、缺陷或其他问题。</value>
+  </data>
+  <data name="OverlayDynamicHUDSection" xml:space="preserve">
+    <value>动态 HUD</value>
+  </data>
+  <data name="Setting_DynamicHUDLoading_Description" xml:space="preserve">
+    <value>控制过场动画和加载画面期间的可见性。</value>
+  </data>
+  <data name="Setting_DynamicHUDLoading_DisplayName" xml:space="preserve">
+    <value>过场动画 / 加载画面</value>
+  </data>
+  <data name="Setting_DynamicHUDWindows_Description" xml:space="preserve">
+    <value>控制窗口的可见性。</value>
+  </data>
+  <data name="Setting_DynamicHUDWindows_DisplayName" xml:space="preserve">
+    <value>窗口</value>
+  </data>
+  <data name="AboutThirdPartySoftwareHeading" xml:space="preserve">
+    <value>软件许可证</value>
+  </data>
+  <data name="Setting_StayInTray_AppendDisabled" xml:space="preserve">
+    <value> （已禁用，因为启动参数包含 --startgw2、--pid、-g 或 -P）</value>
+  </data>
+  <data name="About_DiscordCallToAction1" xml:space="preserve">
+    <value>Blish HUD 的反馈、开发及其他讨论主要在我们的
+</value>
+  </data>
+  <data name="About_DiscordCallToAction2" xml:space="preserve">
+    <value>Discord</value>
+  </data>
+  <data name="About_DiscordCallToAction3" xml:space="preserve">
+    <value>频道中进行。
+</value>
+  </data>
+  <data name="About_DiscordCallToAction_Question" xml:space="preserve">
+    <value>需要帮助，或想参与讨论？</value>
+  </data>
+  <data name="About_DiscordCallToAction_Button" xml:space="preserve">
+    <value>加入 Discord</value>
+  </data>
+  <data name="SelfUpdate_NewPrereleaseAvailable" xml:space="preserve">
+    <value>有新预览版本可用</value>
+  </data>
+  <data name="Setting_MuteIfNoGameAudio_Description" xml:space="preserve">
+    <value>启用后，游戏没有发出声音时 Blish HUD 也会静音。</value>
+  </data>
+  <data name="Setting_MuteIfNoGameAudio_DisplayName" xml:space="preserve">
+    <value>游戏静音时同步静音</value>
+  </data>
+  <data name="Setting_CustomFont_DisplayName" xml:space="preserve">
+    <value>自定义界面字体</value>
+  </data>
+  <data name="Setting_CustomFont_Description" xml:space="preserve">
+    <value>填写已安装的字体名称或 TrueType 字体文件（.ttf/.ttc）的完整路径。留空使用默认字体，中文默认使用系统中文字体。重启 Blish HUD 后生效。中文界面请选择包含中文字形的字体。</value>
+  </data>
+  <data name="Font_RestartRequired" xml:space="preserve">
+    <value>请重启 Blish HUD，使语言或字体更改应用到所有控件。</value>
+  </data>
+  <data name="Font_Invalid" xml:space="preserve">
+    <value>字体不可用。请输入已安装的字体名称或有效的 TrueType 字体文件路径。</value>
+  </data>
+</root>

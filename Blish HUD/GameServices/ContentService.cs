@@ -60,6 +60,31 @@ namespace Blish_HUD {
         }
 
         private IDataReader _audioDataReader;
+        private string _interfaceFontSource;
+        private readonly object _fontLock = new object();
+        internal bool SupportsChineseInterface { get; private set; }
+
+        internal void ConfigureInterfaceFonts(string source, bool chinese) {
+            SupportsChineseInterface = chinese;
+            source = source?.Trim();
+            if (!string.IsNullOrEmpty(source)) {
+                try {
+                    SystemBitmapFont.ValidateSource(source);
+                    _interfaceFontSource = source;
+                    return;
+                } catch (Exception ex) {
+                    Logger.Warn(ex, "Custom font is unavailable; using the default interface font.");
+                }
+            }
+            if (!chinese) return;
+            foreach (string candidate in new[] { "Microsoft YaHei", "Microsoft JhengHei", "SimSun", "Noto Sans CJK SC", "Arial" }) {
+                try {
+                    SystemBitmapFont.ValidateSource(candidate);
+                    _interfaceFontSource = candidate;
+                    return;
+                } catch (ArgumentException) { /* Try the next installed family. */ }
+            }
+        }
 
         private BitmapFont  _defaultFont12;
         public  BitmapFont  DefaultFont12 => _defaultFont12 ??= GetFont(FontFace.Menomonia, FontSize.Size12, FontStyle.Regular);
@@ -270,6 +295,23 @@ namespace Blish_HUD {
 
         public BitmapFont GetFont(FontFace font, FontSize size, FontStyle style) {
             string fullFontName = $"{font.ToString().ToLowerInvariant()}-{((int)size).ToString()}-{style.ToString().ToLowerInvariant()}";
+            if (_loadedBitmapFonts.TryGetValue(fullFontName, out var existingFont)) return existingFont;
+
+            if (_interfaceFontSource != null) {
+                // Acquire the device before the cache lock, matching render-thread callers.
+                using var ctx = Graphics.LendGraphicsDeviceContext();
+                lock (_fontLock) {
+                    if (_loadedBitmapFonts.TryGetValue(fullFontName, out var cachedFont)) return cachedFont;
+                    try {
+                        var systemFont = SystemBitmapFont.Create(_interfaceFontSource, (int)size, style,
+                                                                 SupportsChineseInterface, ctx.GraphicsDevice);
+                        _loadedBitmapFonts[fullFontName] = systemFont;
+                        return systemFont;
+                    } catch (Exception ex) {
+                        Logger.Warn(ex, "Failed to render interface font {font}; using packaged font.", _interfaceFontSource);
+                    }
+                }
+            }
 
             if (!_loadedBitmapFonts.ContainsKey(fullFontName)) {
                 var loadedFont = this.ContentManager.Load<BitmapFont>($"fonts\\{font.ToString().ToLowerInvariant()}\\{fullFontName}");
@@ -284,6 +326,9 @@ namespace Blish_HUD {
 
         protected override void Unload() {
             _loadedTextures.Clear();
+            foreach (var font in _loadedBitmapFonts.Values) {
+                if (font is SystemBitmapFont systemFont) systemFont.Dispose();
+            }
             _loadedBitmapFonts.Clear();
         }
 

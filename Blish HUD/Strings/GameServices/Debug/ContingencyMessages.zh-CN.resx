@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Win32AccessDenied_Title" xml:space="preserve">
+    <value>Blish HUD 访问被拒绝！</value>
+  </data>
+  <data name="Win32AccessDenied_Description" xml:space="preserve">
+    <value>Blish HUD 无法访问激战2进程，游戏可能以管理员身份运行。
+
+请以管理员身份重启 Blish HUD，或以非管理员身份重启激战2。</value>
+  </data>
+  <data name="GenericUrl_Footer" xml:space="preserve">
+    <value>请查看此问题的&lt;a href="{0}"&gt;故障排除指南&lt;/a&gt;，或加入我们的 &lt;a href="{1}"&gt;Discord 💢help 频道&lt;/a&gt;。</value>
+  </data>
+  <data name="ArcDpsSameDir_Description" xml:space="preserve">
+    <value>Blish HUD 目录中存在自定义 d3d11.dll（例如 ArcDPS），它会尝试注入 Blish HUD 并导致崩溃。请将 Blish HUD 解压到其他文件夹。</value>
+  </data>
+  <data name="ArcDpsSameDir_Title" xml:space="preserve">
+    <value>Blish HUD 无法运行！</value>
+  </data>
+  <data name="MissingRef_Title" xml:space="preserve">
+    <value>请重新解压 Blish HUD！</value>
+  </data>
+  <data name="MissingRef_Description" xml:space="preserve">
+    <value>Blish HUD 找不到 ref.dat。下载后请解压 ZIP 中的全部文件，并确保它们与 Blish HUD.exe 位于同一目录。</value>
+  </data>
+  <data name="FileSaveAccessDenied_Title" xml:space="preserve">
+    <value>Blish HUD 无法保存数据！</value>
+  </data>
+  <data name="FileSaveAccessDenied_Description" xml:space="preserve">
+    <value>Blish HUD 向“{0}”写入数据时被阻止，操作为：{1}。
+
+通常由杀毒软件或 Windows 的受控文件夹访问引起。请在杀毒软件中明确允许 Blish HUD。</value>
+  </data>
+  <data name="HttpAccessDenied_Title" xml:space="preserve">
+    <value>网络访问被阻止！</value>
+  </data>
+  <data name="HttpAccessDenied_Description" xml:space="preserve">
+    <value>发出网络请求 {0} 时受到阻止。
+
+如果使用杀毒软件或第三方防火墙，请将 Blish HUD 加入其允许列表。</value>
+  </data>
+  <data name="CoreUpdateFailed_Title" xml:space="preserve">
+    <value>更新失败！</value>
+  </data>
+  <data name="CoreUpdateFailed_Description" xml:space="preserve">
+    <value>Blish HUD 更新到 v{0} 失败。请重新启动以重试。错误信息：
+
+{1}</value>
+  </data>
+  <data name="FileSaveAccessDenied_Action_ToUpdate" xml:space="preserve">
+    <value>更新 Blish HUD</value>
+  </data>
+  <data name="FileSaveAccessDenied_Action_ToLoadSettings" xml:space="preserve">
+    <value>加载设置</value>
+  </data>
+  <data name="FileSaveAccessDenied_Action_ToSaveSettings" xml:space="preserve">
+    <value>保存设置</value>
+  </data>
+  <data name="CoreUpdateFailed_Description_Timeout" xml:space="preserve">
+    <value>其他 Blish HUD 实例仍在运行。请先关闭它们，再运行 Blish HUD 完成更新。</value>
+  </data>
+  <data name="CfaBlocking_Title" xml:space="preserve">
+    <value>Blish HUD 被阻止！</value>
+  </data>
+  <data name="CfaBlocking_Description" xml:space="preserve">
+    <value>Blish HUD 向“{0}”保存数据时被阻止，可能由 Windows 的受控文件夹访问引起。
+
+请在“受控文件夹访问”设置中明确允许 Blish HUD，或查看下方故障排除指南。</value>
+  </data>
+  <data name="NvidiaSettings_Description" xml:space="preserve">
+    <value>某些 NVIDIA 设置与 Blish HUD 不兼容，可能导致覆盖层显示黑色背景。
+
+请将以下设置恢复为默认值：
+{0}
+
+详细解决方法见下方指南。</value>
+  </data>
+  <data name="NvidiaSettings_OpenControlPanelAction" xml:space="preserve">
+    <value>打开 NVIDIA 控制面板</value>
+  </data>
+  <data name="NvidiaSettings_Title" xml:space="preserve">
+    <value>NVIDIA 设置不兼容</value>
+  </data>
+  <data name="ConflictingFullscreenSettings_Title" xml:space="preserve">
+    <value>图形设置冲突！</value>
+  </data>
+  <data name="ConflictingFullscreenSettings_Description" xml:space="preserve">
+    <value>检测到游戏以全屏模式运行并启用了 DirectX 9，此配置下 Blish HUD 无法正常工作。请选择以下方法之一：
+
+1）取消游戏图形选项中的“启用 DX9 渲染（已弃用）”。
+2）将“分辨率”设为“窗口全屏”或“窗口”。
+
+更多帮助请参考下方指南。</value>
+  </data>
+  <data name="NvidiaSettings_Error" xml:space="preserve">
+    <value>“{0}”不应为“{1}”</value>
+  </data>
+</root>
